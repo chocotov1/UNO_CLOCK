@@ -18,8 +18,8 @@ For a future project idea I have in mind this means I don't need to use an exter
 
 # Hardware setup
 - ATmega328p on breadboard, 8 MHz internal clock [MiniCore](https://github.com/MCUdude/MiniCore)
-- 32 khz watch crystal
+- 32 kHz watch crystal
 - SSD1306 oled display
 
 # Software
--  my fork of [Tiny4kOLED](https://github.com/chocotov1/Tiny4kOLED)
+-  my fork of [Tiny4kOLED](https://github.com/chocotov1/Tiny4kOLED) (contains 16x32 digits only font)
