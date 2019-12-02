@@ -16,7 +16,7 @@
 
 byte timer2_ovf_counter;
 volatile bool timer2_ovf;
-volatile uint32_t global_seconds = 1200;
+volatile uint32_t global_seconds = 60900;
 volatile bool seconds_changed = false;
 
 //byte time_display_buffer[2][6];
@@ -57,11 +57,14 @@ void setup() {
    set_sleep_mode(SLEEP_MODE_PWR_SAVE);
 
    oled.begin();
-   oled.setContrast(0); // 0: dim, 255: bright
+   oled.setContrast(25); // 0: dim, 255: bright
    //oled.setFont(FONT6X8);
    //oled.setFont(FONT8X16);
    // big numbers
    oled.setFont(FONT16X32DIGITS);
+
+   oled.setVcomhDeselectLevel(0); // darker screen, bigger contrast range 
+   oled.setPrechargePeriod(0,0);  // darker screen, bigger contrast range
 
    // toggle DisplayFrame to not be the RenderFrame, otherwise updates are visible 
    oled.switchDisplayFrame();
